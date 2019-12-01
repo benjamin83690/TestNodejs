@@ -1,0 +1,107 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+
+    background: linear-gradient(180deg, #343a40eb, transparent) no-repeat;
+    height: 100vh;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+.green {
+    color: green;
+}
+
+.row-form {
+    flex-direction: column;
+}
+
+.box-form {
+    width: 45%;
+    margin: 25px auto;
+}
+
+.jumb-form {
+    box-shadow: 1px 1px 6px 1px #0000009e;
+}
+
+input {
+    box-shadow: inset 1px -1px 2px #000000b3;
+}
+
+.text-white, button, a {
+    text-shadow: 1px 1px 2px black;
+}
+
+.title-newC {
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+.right {
+    float: right;
+    color: #777474;
+}
+
+.card-body {
+    padding: 1.95rem;
+}
+
+textarea {
+    width: 100%;
+}
+
+/* #card-show {
+    box-shadow: 0 0 9px 1px #0000008c;
+} */
+
+.well {
+    background-color: #d3d3d3a3;
+    padding: 1.95rem;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px #0000007a;
+}
+
+#user {
+    color: #fff !important;
+    text-shadow: 2px 2px 2px #000000d1;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.compte-user {
+    color: #ccc;
+}
+
+.form-delete {
+    display: inline;
+}
+
+.navbar {
+    background-color: #dc4143;
+    font-size: 12px;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.nav-tabs .nav-link{
+    color: #fff !important;
+    text-align: center;
+}
+.nav-tabs .nav-link.active,  .nav-tabs .nav-link:hover{
+    color: #d82c2e !important;
+    background-color: #fff !important;
+}
+.navbar-toggler{
+    color: #fff !important;
+    border-style: none;
+}

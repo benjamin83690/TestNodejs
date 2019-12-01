@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row row-form">
+        <h1 class="title-newC text-white">Modifier <%= campground.name %> :</h1>
+        <div class="box-form">
+            <div class="jumbotron jumb-form">
+                <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom du Camping :</label>
+                        <input type="text" name="campground[name]" class="form-control" value="<%= campground.name %>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Camping Image :</label>
+                        <input type="text" name="campground[image]" class="form-control" value="<%= campground.image %>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description Camping :</label>
+                        <textarea name="campground[description]" cols="50" rows="5" required><%= campground.description %></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg mt-4 btn-block">Submit!</button>
+                    </div>
+                </form>
+            </div>
+            <a class="btn btn-primary btn-sm" href="/campgrounds/<%= campground._id %>">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+    
+        <div class="container">
+            <div class="row">
+                <% if (error && error.length > 0) { %>
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <p class="text-center m-0"><strong><%= error %></strong></p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                <% } %>            
+                <% if (success && success.length > 0) { %>
+                    <div class="col-md-12">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <p class="text-center m-0"><strong><%= success %></strong></p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                <% } %> 
+                <% if (warning && warning.length > 0) { %>
+                    <div class="col-md-12">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <p class="text-center m-0"><strong><%= warning %></strong></p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                <% } %>
+                <% if (info && info.length > 0) { %>
+                    <div class="col-md-12">
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <p class="text-center m-0"><strong><%= info %></strong></p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                <% } %> 
+                <% if (dark && dark.length > 0) { %>
+                    <div class="col-md-12">
+                        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                                <p class="text-center m-0"><strong><%= dark %></strong></p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                <% } %>   
+            </div>
+        </div>
+        
+        <div id="landing-header">
+            <div class="container">
+                <div class="row row-form">
+                    <div class="box-form">
+                        <div class="jumbotron jumb-form">
+                            <fieldset>
+                                <legend class="text-center">Connexion/Inscription :</legend>
+                                <form action="/" method="POST">
+                                    <div class="form-group">
+                                        <label for="username">Pseudo</label>
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="Pseudo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Mot De Passe</label>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
+                                    </div>
+                                    <button class="btn btn-success shadow-sm" type="submit">Se connecter</button>
+                                    <a href="/register" class="btn btn-success shadow-sm">S'inscrire</a>
+                                </form>
+                            </fieldset>
+                        </div>
+                        <a href="/campgrounds" class="btn btn-lg btn-success linkC shadow">Parcourir les Campings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="slideshow">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+<% include partials/footer %>

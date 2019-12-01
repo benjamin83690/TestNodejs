@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row row-form">
+        <h1 class="title-newC text-white">Ajouter un nouveau Camping :</h1>
+        <div class="box-form">
+            <div class="jumbotron jumb-form">
+                <form action="/campgrounds" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom du Camping :</label>
+                        <input type="text" name="name" class="form-control" placeholder="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Camping Image :</label>
+                        <input type="text" name="image" class="form-control" placeholder="image url" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Camping Description :</label>
+                        <textarea name="description" cols="50" rows="5" placeholder="Description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg mt-4 btn-block">Submit!</button>
+                    </div>
+                </form>
+            </div>
+            <a class="btn btn-primary btn-sm" href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
